@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, target-densityDpi=device-dpi, minimal-ui' />
+    <title>Shubhendu Chakrabarti</title>
+    <meta property="og:title" content="Shubhendu Chakrabarti"/>
+    <meta name="description" content="Shubhendu Chakrabarti 3D Portfolio"/>
+    <meta property="og:description" content="Shubhendu Chakrabarti 3D Portfolio"/>
+    <meta property="og:url" content="https://mdamiruddin-3dportfolio.vercel.app"/>
+    <meta property="og:image" content="https://raw.githubusercontent.com/MdAmiruddin/mdamiruddin-3dportfolio/main/public/social/screenshot.png"/>
+    <meta name="twitter:card" content="summary"/>
+  </head>
+  <body class="light-theme">
+    <div class="experience">
+      <canvas class="experience-canvas"></canvas>
+    </div>
+
+    <!-- Preloader -->
+    <div class="preloader">
+      <div class="preloader-wrapper">
+        <div class="loading">
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page" asscroll-container>
+
+      <div class="toggle-bar">
+        <div class="sun-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24"><path fill="currentColor" d="M12 5Q11.575 5 11.288 4.712Q11 4.425 11 4V2Q11 1.575 11.288 1.287Q11.575 1 12 1Q12.425 1 12.713 1.287Q13 1.575 13 2V4Q13 4.425 12.713 4.712Q12.425 5 12 5ZM16.95 7.05Q16.675 6.775 16.675 6.362Q16.675 5.95 16.95 5.65L18.35 4.225Q18.65 3.925 19.062 3.925Q19.475 3.925 19.775 4.225Q20.05 4.5 20.05 4.925Q20.05 5.35 19.775 5.625L18.35 7.05Q18.075 7.325 17.65 7.325Q17.225 7.325 16.95 7.05ZM20 13Q19.575 13 19.288 12.712Q19 12.425 19 12Q19 11.575 19.288 11.287Q19.575 11 20 11H22Q22.425 11 22.712 11.287Q23 11.575 23 12Q23 12.425 22.712 12.712Q22.425 13 22 13ZM12 23Q11.575 23 11.288 22.712Q11 22.425 11 22V20Q11 19.575 11.288 19.288Q11.575 19 12 19Q12.425 19 12.713 19.288Q13 19.575 13 20V22Q13 22.425 12.713 22.712Q12.425 23 12 23ZM5.65 7.05 4.225 5.65Q3.925 5.35 3.925 4.925Q3.925 4.5 4.225 4.225Q4.5 3.95 4.925 3.95Q5.35 3.95 5.625 4.225L7.05 5.65Q7.325 5.925 7.325 6.35Q7.325 6.775 7.05 7.05Q6.75 7.325 6.35 7.325Q5.95 7.325 5.65 7.05ZM18.35 19.775 16.95 18.35Q16.675 18.05 16.675 17.638Q16.675 17.225 16.95 16.95Q17.225 16.675 17.638 16.675Q18.05 16.675 18.35 16.95L19.775 18.35Q20.075 18.625 20.062 19.05Q20.05 19.475 19.775 19.775Q19.475 20.075 19.05 20.075Q18.625 20.075 18.35 19.775ZM2 13Q1.575 13 1.288 12.712Q1 12.425 1 12Q1 11.575 1.288 11.287Q1.575 11 2 11H4Q4.425 11 4.713 11.287Q5 11.575 5 12Q5 12.425 4.713 12.712Q4.425 13 4 13ZM4.225 19.775Q3.95 19.5 3.95 19.075Q3.95 18.65 4.225 18.375L5.65 16.95Q5.925 16.675 6.338 16.675Q6.75 16.675 7.05 16.95Q7.35 17.25 7.35 17.663Q7.35 18.075 7.05 18.375L5.65 19.775Q5.35 20.075 4.925 20.075Q4.5 20.075 4.225 19.775ZM12 18Q9.5 18 7.75 16.25Q6 14.5 6 12Q6 9.5 7.75 7.75Q9.5 6 12 6Q14.5 6 16.25 7.75Q18 9.5 18 12Q18 14.5 16.25 16.25Q14.5 18 12 18ZM12 16Q13.65 16 14.825 14.825Q16 13.65 16 12Q16 10.35 14.825 9.175Q13.65 8 12 8Q10.35 8 9.175 9.175Q8 10.35 8 12Q8 13.65 9.175 14.825Q10.35 16 12 16Z"/></svg>
+        </div>
+        <button class="toggle-button">
+          <div class="toggle-circle"></div>
+        </button>
+        <div class="moon-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24"><path fill="currentColor" d="M12 21Q8.25 21 5.625 18.375Q3 15.75 3 12Q3 8.25 5.625 5.625Q8.25 3 12 3Q12.35 3 12.688 3.025Q13.025 3.05 13.35 3.1Q12.325 3.825 11.713 4.987Q11.1 6.15 11.1 7.5Q11.1 9.75 12.675 11.325Q14.25 12.9 16.5 12.9Q17.875 12.9 19.025 12.287Q20.175 11.675 20.9 10.65Q20.95 10.975 20.975 11.312Q21 11.65 21 12Q21 15.75 18.375 18.375Q15.75 21 12 21ZM12 19Q14.2 19 15.95 17.788Q17.7 16.575 18.5 14.625Q18 14.75 17.5 14.825Q17 14.9 16.5 14.9Q13.425 14.9 11.262 12.738Q9.1 10.575 9.1 7.5Q9.1 7 9.175 6.5Q9.25 6 9.375 5.5Q7.425 6.3 6.213 8.05Q5 9.8 5 12Q5 14.9 7.05 16.95Q9.1 19 12 19ZM11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Z"/></svg>
+        </div>
+      </div>
+      
+      <div class="page-wrapper" asscroll>
+        <section class="hero">
+          <div class="hero-wrapper">
+
+            <!-- Intro Stuff -->
+            <div class="intro-text">Welcome to my portfolio!</div>
+            <div class="arrow-svg-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24"><path fill="currentColor" d="M12 14.95q-.2 0-.375-.063-.175-.062-.325-.212L6.675 10.05q-.275-.275-.262-.688.012-.412.287-.687.275-.275.7-.275.425 0 .7.275l3.9 3.9 3.925-3.925q.275-.275.688-.263.412.013.687.288.275.275.275.7 0 .425-.275.7l-4.6 4.6q-.15.15-.325.212-.175.063-.375.063Z"/></svg>
+            </div>
+
+            <div class="hero-main">
+              <h1 class="hero-main-title">Shubhendu Chakrabarti</h1>
+              <p class="hero-main-description">MERN Stack Web Developer</p>
+            </div>
+
+            <div class="hero-second">
+              <p class="hero-second-subheading first-sub">Shubhendu Chakrabarti</p>
+              <p class="hero-second-subheading second-sub">Portfolio</p>
+            </div>
+
+          </div>
+        </section>
+
+        <div class="first-move section-margin"></div>
+
+        <section class="first-section section left">
+          <div class="progress-wrapper progress-bar-wrapper-left">
+            <div class="progress-bar"></div>
+          </div>
+
+          <div class="section-intro-wrapper">
+            <h1 class="section-title">
+              <span class="section-title-text">About Me</span>
+              <div class="section-title-decoration styleOne"></div>
+              <div class="section-title-decoration styleTwo"></div>
+              <div class="section-title-decoration styleThree"></div>
+            </h1>
+            <span class="section-number">01</span>
+          </div>
+          
+
+          <div class="section-detail-wrapper">
+     
+            <p class="section-text">Hello! I'm a passionate college student with a deep interest in web development. Over the past few years, I’ve taken the initiative to teach myself the skills necessary to thrive in the tech world. I'm currently focused on mastering the MERN stack (MongoDB, Express, React, and Node.js), which has given me a strong foundation in both front-end and back-end development. My curiosity and love for technology fuel my constant desire to learn new techniques, experiment with different tools, and keep up with the latest trends in web development.</p>
+            <p class="section-text">In addition to my self-learning journey, I have actively sought out opportunities to apply my skills and gain hands-on experience by participating in several hackathons. Some of the notable events I’ve been involved in include SIH'24, GIH'24, and SWOC'25. These experiences have not only allowed me to showcase my problem-solving abilities but have also taught me how to collaborate efficiently with others, work under pressure, and create practical solutions to complex challenges.</p>
+            <p class="section-text">I believe that being a web developer is not just about writing code—it’s about building things that make a real impact. I’m always looking for ways to combine creativity and technical knowledge to develop websites and applications that are both functional and user-friendly. My journey in web development is just beginning, and I’m excited about the future possibilities. As I continue to grow, I’m eager to connect with like-minded individuals, work on impactful projects, and contribute to the ever-evolving world of web development.</p>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <h1 id="education">EDUCATION</h1>
+            <br>
+            <br>
+            <br>
+            <p><img src="https://d3bat55ebwjhsf.cloudfront.net/schools/logos/user_generic_school_user/dce84a86-c0d9-4f71-9fa7-1f2b2fd21052-5c778832-4b_UGXVkBT.webp" width="200" alt=""></p>
+            <br>
+            <br>
+            <h3 id="-government-college-of-engineering-and-leather-technology-https-www-linkedin-com-school-gcelt-trk-public_profile_school-"><a href="https://www.nvmdg.com">Nutan Vidya Mandir Senior Secondary School</a></h3>
+            <br>
+            <br>
+            <h4 id="bachelor-of-technology-in-leather-technology">Intermediate Education</h4>
+            <br>
+            <br>
+            <p>CGPA - 8.0</p>
+            <br>
+            <p>[ 2023  -  2024 ]</p>
+            <br>
+            <h4 id="bachelor-of-technology-in-leather-technology">Secondary Education</h4>
+            <br>
+            <br>
+            <p>CGPA - 9.3</p>
+            <br>
+            <p>[ 2020 - 2021 ] </p>
+            <br>
+            <br>
+            <p><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGpWOshEvLF8mFeoQ83Vf4NhA-P79Xd2bL3g&s" alt=""></p>
+            <br>
+            <br>
+            <h3 id="-government-college-of-engineering-and-leather-technology-https-www-linkedin-com-school-gcelt-trk-public_profile_school-"><a href="https://galgotiacollege.edu">Galgotias College of Engineering & Technology</a></h3>
+            <br>
+            <br>
+            <br>
+            <h4 id="bachelor-of-technology-in-leather-technology">Secondary Education</h4>
+            <br>
+            <br>
+            <p>Currently Pursuing Bachelor of Technology in</p>
+            <br>
+            <p>Artificial Intelligence and Machine Learning</p>
+            <br>
+            <p>[ 2024  -  2027 ]</p>
+            <br>
+          </div>
+        </section>
+
+        <div class="second-move section-margin"></div>
+
+        <section class="second-section section right">
+          <div class="progress-wrapper progress-bar-wrapper-right">
+            <div class="progress-bar blue-background"></div>
+          </div>
+
+          <div class="section-intro-wrapper blue-text blue-border">
+            <h1 class="section-title blue-text blue-border">
+              <span class="section-title-text blue-text">My Projects</span>
+              <div class="section-title-decoration styleOne blue-border"></div>
+              <div class="section-title-decoration styleTwo blue-border"></div>
+              <div class="section-title-decoration styleThree blue-background blue-border"></div>
+            </h1>
+            <span class="section-number blue-text">02</span>
+          </div>
+
+          <div class="section-detail-wrapper">
+            <h3 class="section-heading">HR Management System</h3>
+            <br>
+            <p class="section-text">The website workflow is a highly intuitive and versatile platform that revolutionizes how corporate teams manage their tasks and meet deadlines.</p>
+            <br>
+            <p class="section-text">By offering a centralized hub for task management, it eliminates the inefficiencies associated with scattered tools and disjointed communication channels. Teams can easily assign, track, and prioritize tasks while gaining visibility into overall project progress.</p>
+            <br>
+            <br>
+            <p><picture> <img src="1234.jpg" width="500"></picture></p>
+            
+              
+            
+            <h3 class="section-heading">Firewall Central Database</h3>
+            <br>
+            <p class="section-text">The Firewall Central Management Console is a powerful and intuitive platform designed to streamline the administration of network security policies across multiple firewall devices.</p>
+            <br>
+            <p class="section-text">As businesses increasingly rely on complex network infrastructures, managing firewalls individually becomes cumbersome and prone to oversight. This console provides a centralized approach to configuring, monitoring, and maintaining firewall rules, offering a comprehensive solution to enhance both security and operational efficiency.</p>
+            <br>
+            <br>
+            <video controls width="500">
+              <source src="video.mp4" type="video/webm">
+          </video>
+          </div>
+        </section>
+        
+        <div class="third-move section-margin"></div>
+
+        <section class="third-section section left">
+          <div class="progress-wrapper progress-bar-wrapper-left">
+            <div class="progress-bar green-background"></div>
+          </div>
+
+          <div class="section-intro-wrapper green-text green-border">
+            <h1 class="section-title green-text green-border">
+              <span class="section-title-text green-text">Contact Me</span>
+              <div class="section-title-decoration styleOne green-border"></div>
+              <div class="section-title-decoration styleTwo green-border"></div>
+              <div class="section-title-decoration styleThree green-background green-border"></div>
+            </h1>
+            <span class="section-number green-text">03</span>
+          </div>
+
+          <div class="section-detail-wrapper">
+            <h3 class="section-heading">Linkedin</h3>
+            <br>
+            <p class="section-text">If you'd like to get in touch, please feel free to connect with me on LinkedIn. On LinkedIn.</p>
+            <br>
+            <br>
+            <p><a href="https://www.linkedin.com/in/shubhenduchakrabarti"><img src="linkedin.png" width="500" alt = ""> </a></p>
+            <h3 class="section-heading">Github</h3>
+            <p class="section-text">I'm a passionate and results-driven MERN Stack Developer with a strong focus on building dynamic, full-stack web applications. My expertise lies in using MongoDB, Express.js, React, and Node.js to create responsive, scalable, and high-performance websites and applications.</p>
+            <br>
+            <p><a href="https://github.com/codewithshxbh"><img src="https://img.shields.io/badge/Github-12100E?logo=github&amp;logoColor=white" width="100" alt="Medium"></a></p>
+            <br>
+          </div>
+          <br>
+          <br>
+          <br>
+          <footer class="footer">
+            <span class="footer__copyright">Copyright &copy; 2025 - Shubhendu Chakrabarti</span>
+          </footer>
+        </section>
+        <br>
+        <br>
+        
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
